@@ -8,6 +8,10 @@ class OsFilter
         $arch = null;
         $platform = strtolower(PHP_OS);
 
+        if (substr($platform, 0, 3) === 'win') {
+            $platform = 'winint';
+        }
+
         if (!empty(strstr(php_uname('m'), '64'))) {
             $arch = 'x64';
         } else {
