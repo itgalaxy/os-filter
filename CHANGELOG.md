@@ -1,8 +1,8 @@
 # Head
 
--   Fixed: used full namespace.
+-   Changed: used full namespace.
+-   Changed: added vendor namespace.
 -   Fixed: supported non-standard `PHP_OS` values for `windows`.
--   Fixed: added vendor namespace.
 
 # 1.0.0 - 2016-12-03
 
