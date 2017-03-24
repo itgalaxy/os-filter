@@ -1,7 +1,7 @@
 <?php
-namespace OsFilter\Tests;
+namespace Itgalaxy\OsFilter\Tests;
 
-use OsFilter\OsFilter;
+use Itgalaxy\OsFilter\OsFilter;
 use PHPUnit\Framework\TestCase;
 
 class OsFilterTest extends TestCase

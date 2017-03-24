@@ -1,5 +1,5 @@
 <?php
-namespace OsFilter;
+namespace Itgalaxy\OsFilter;
 
 class OsFilter
 {
