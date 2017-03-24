@@ -9,7 +9,7 @@ class OsFilter
         $platform = strtolower(PHP_OS);
 
         if (substr($platform, 0, 3) === 'win') {
-            $platform = 'winint';
+            $platform = 'winnt';
         }
 
         if (!empty(strstr(php_uname('m'), '64'))) {

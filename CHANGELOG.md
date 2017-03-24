@@ -1,4 +1,4 @@
-# Head
+# 2.0.0 - 2017-03-24
 
 -   Changed: used full namespace.
 -   Changed: added vendor namespace.
