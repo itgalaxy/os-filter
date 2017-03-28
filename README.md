@@ -20,7 +20,7 @@ Coming soon
 
 ## Related
 
-- [os-filter-obj](https://github.com/kevva/os-filter-obj) - Thanks you for inspiration.
+-   [os-filter-obj](https://github.com/kevva/os-filter-obj) - Thanks you for inspiration.
 
 ## Contribution
 
