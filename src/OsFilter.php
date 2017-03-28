@@ -3,13 +3,16 @@ namespace Itgalaxy\OsFilter;
 
 class OsFilter
 {
-    public static function find($arr)
+    public static function find($arr = [])
     {
-        $arch = null;
+        if (!is_array($arr)) {
+            throw new \InvalidArgumentException('List of os and arch should be array');
+        }
+
         $platform = strtolower(PHP_OS);
 
         if (substr($platform, 0, 3) === 'win') {
-            $platform = 'winnt';
+            $platform = 'windows';
         }
 
         if (!empty(strstr(php_uname('m'), '64'))) {
@@ -18,11 +21,11 @@ class OsFilter
             $arch = 'x86';
         }
 
-        if (!$arr || count($arr) == 0) {
+        if (count($arr) == 0) {
             return [];
         }
 
-        return array_filter(
+        return array_values(array_filter(
             $arr,
             function ($obj) use ($arch, $platform) {
                 if (!empty($obj['os']) && $obj['os'] == $platform && !empty($obj['arch']) && $obj['arch'] == $arch) {
@@ -42,6 +45,6 @@ class OsFilter
                     return $obj;
                 }
             }
-        );
+        ));
     }
 }
