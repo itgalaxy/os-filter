@@ -58,6 +58,10 @@ class OsFilterTest extends TestCase
 
         $os = strtolower(PHP_OS);
 
+        if (substr($os, 0, 3) === 'win') {
+            $os = 'windows';
+        }
+
         if (strstr(php_uname('m'), '64') !== false) {
             $arch = 'x64';
         } else {
@@ -74,12 +78,12 @@ class OsFilterTest extends TestCase
         $this->assertTrue($osFilter->find($arr)[2]['foo'] === $os);
         $this->assertTrue($osFilter->find($arr)[2]['os'] === $os);
 
-        if ($os === 'linux') {
+        if ($os == 'linux') {
             $this->assertTrue(count($result) === 4);
             $this->assertTrue($osFilter->find($arr)[3]['foo'] === $os);
             $this->assertTrue($osFilter->find($arr)[3]['os'] === $os);
             $this->assertTrue($osFilter->find($arr)[3]['arch'] === $arch);
-        } elseif (substr($os, 0, 3) === 'win') {
+        } elseif ($os == 'windows') {
             $this->assertTrue(count($result) === 4);
 
             $this->assertTrue($osFilter->find($arr)[3]['foo'] === $os);
