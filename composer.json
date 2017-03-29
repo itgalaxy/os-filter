@@ -33,15 +33,5 @@
         "psr-4": {
             "Itgalaxy\\OsFilter\\": "src/"
         }
-    },
-    "archive": {
-        "exclude": [
-            "!vendor",
-            "tests",
-            "*phpunit.xml*",
-            ".travis.yml",
-            "appveyor.yml",
-            "composer.phar"
-        ]
     }
 }
