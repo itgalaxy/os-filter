@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 # 3.0.0 - 2017-03-28
 
 -   Changed: normalize array index in find result.
--   Changed: used `windos` definition for all `windos` os.
+-   Changed: used `windows` definition for all `windos` os.
 
 # 2.0.0 - 2017-03-24
 
