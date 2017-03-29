@@ -9,29 +9,29 @@ cache:
 matrix:
     fast_finish: true
     include:
-#        - os: linux
-#          php: 5.6
-#          env: DEPENDENCIES=lowest
-#
-#        - os: linux
-#          php: 5.6
-#          env: DEPENDENCIES=highest
-#
-#        - os: linux
-#          php: 7.0
-#          env: DEPENDENCIES=lowest
-#
-#        - os: linux
-#          php: 7.0
-#          env: DEPENDENCIES=highest
-#
-#        - os: linux
-#          php: 7.1
-#          env: DEPENDENCIES=lowest
-#
-#        - os: linux
-#          php: 7.1
-#          env: DEPENDENCIES=highest WITH_COVERAGE=true
+        - os: linux
+          php: 5.6
+          env: DEPENDENCIES=lowest
+
+        - os: linux
+          php: 5.6
+          env: DEPENDENCIES=highest
+
+        - os: linux
+          php: 7.0
+          env: DEPENDENCIES=lowest
+
+        - os: linux
+          php: 7.0
+          env: DEPENDENCIES=highest
+
+        - os: linux
+          php: 7.1
+          env: DEPENDENCIES=lowest
+
+        - os: linux
+          php: 7.1
+          env: DEPENDENCIES=highest WITH_COVERAGE=true
 
         - os: linux
           php: hhvm
@@ -44,27 +44,12 @@ matrix:
         - os: osx
           osx_image: xcode8.3
           language: generic
-          env: _OSX=10.12 _PHP=php56 DEPENDENCIES=lowest
-
-        - os: osx
-          osx_image: xcode8.3
-          language: generic
           env: _OSX=10.12 _PHP=php56 DEPENDENCIES=highest
 
         - os: osx
           osx_image: xcode8.3
           language: generic
-          env: _OSX=10.12 _PHP=php70 DEPENDENCIES=lowest
-
-        - os: osx
-          osx_image: xcode8.3
-          language: generic
           env: _OSX=10.12 _PHP=php70 DEPENDENCIES=highest
-
-        - os: osx
-          osx_image: xcode8.3
-          language: generic
-          env: _OSX=10.12 _PHP=php71 DEPENDENCIES=lowest
 
         - os: osx
           osx_image: xcode8.3
