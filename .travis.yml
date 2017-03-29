@@ -56,11 +56,6 @@ matrix:
           language: generic
           env: _OSX=10.12 _PHP=php71 DEPENDENCIES=highest
 
-        - os: osx
-          osx_image: xcode8.3
-          language: generic
-          php: hhvm
-          env: DEPENDENCIES=highest
     allow_failures:
         - php: nightly
 
@@ -80,7 +75,7 @@ install:
 #    - /usr/bin/env bash bin/custom_php_ini.sh # set ADDITIONAL_PHP_INI env pointing to correct file (e.g. build/.travis.php.ini)
 
 script:
-    - composer validate
+    - php composer.phar validate
     - if [[ "${WITH_COVERAGE}" == "true" ]]; then php composer.phar test; else php composer.phar test -- --no-coverage; fi
 
 after_success:
